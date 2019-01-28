@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/resources.css">
+    <link rel="shortcut icon" href="./assets/images/logo.png">
+    <meta name="description" content="Resources created or shared by members of Veggies of Virginia, such as guides and menus."> 
+    <meta name="keywords" content="CIO,UVA,club,vegan,veggies,plant-based,health,environment,veggies of virginia">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128636921-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-128636921-1');
+    </script>
+    <title>Resources - Veggies of Virginia at UVA</title>
+  </head>
+  <body onresize="updateElements()">
+    <nav>
+      <ul id="nav-links">
+        <li id="home"> <div id="mobile-spacer"></div> <a href="./index.html">Home</a> <button id="mobile-toggle" onclick="toggleNav()">&#9776</button> </li>
+        <li class="nav-link"> <a href="./about.html">About</a> </li>
+        <li class="nav-link"> <a href="./events.html">Events</a> </li>
+        <li class="nav-link"> <a href="./resources.html">Resources</a> </li>
+        <li class="nav-link"> <a href="./contact.html">Contact</a> </li>
+      </ul>
+    </nav>
+    <div id="content">
+      <h1 class="title">Resources</h1>
+      <div id="info">
+        <p><!--General statement about resources--></p>
+      </div>
+      <h2 class="subtitle" id="guides-list">Guides</h2>
+      <div id="guides"></div>
+      <h2 class="subtitle" id="menus-list">Menus</h2>
+      <div id="menus"></div>
+    </div>
+    <footer class="footer">
+      <div id="footer-text">
+        <p id="contact">
+          Contact Veggies of Virginia: <a href="mailto:rac4ak@virginia.edu">rac4ak@virginia.edu</a>
+        </p>
+        <p id="copyright">
+          &copy 2018<script>new Date().getFullYear() > 2018 && document.write("-" + new Date().getFullYear());</script> - Samuel McBroom
+        </p>
+      </div>
+      <ul id="footer-links">
+        <li> <a class="icon" href="https://www.facebook.com/veggiesofvirginia/" target="_blank"> <img src="./assets/images/facebook.png" /> </a> </li>
+        <li> <a class="icon" href="https://www.instagram.com/veggiesofvirginia/" target="_blank"> <img src="./assets/images/instagram.png" /> </a> </li>
+      </ul>
+    </footer>
+    <script>
+      var prevWidth = window.innerWidth;
+      var resourceNames = ["Veggies of Virginia FAQ", "Eating in Charlottesville", "Vegan Job Guide", "A Weak of Meals"];
+      var resourceInfos = ["Check out the guide <a href=\"./assets/guides/vov_faq.pdf\">here</a>!", "Check out the guide <a href=\"./assets/guides/cville_eating.pdf\">here</a>!", "Check out the guide <a href=\"./assets/guides/vegan_jobs.pdf\">here</a>!", "Check out the menu <a href=\"./assets/menus/menu_0.pdf\">here</a>!"];
+      var resourceDates = ["Monday, Nov. 12, 2018", "Monday, Nov. 12, 2018", "Monday, Nov. 12, 2018", "Monday, Nov. 12, 2018"];
+      var resourceDivs = ["guides", "guides", "guides", "menus"];
+      addResources();
+      function updateElements() {
+        var navLinks = document.getElementsByClassName("nav-link");
+        for (i = 0; i < navLinks.length; i++) {
+          if (window.innerWidth < 767 && prevWidth >= 767) {
+            navLinks[i].style.display = "none";
+          } else if (window.innerWidth >= 767 && prevWidth < 767 && navLinks[i].style.display === "none") {
+            navLinks[i].style.display = "flex";
+          }
+        }
+        prevWidth = window.innerWidth;
+      }
+      function toggleNav() {
+        var navLinks = document.getElementsByClassName("nav-link");
+        for (i = 0; i < navLinks.length; i++) {
+          if (navLinks[i].style.display !== "none" && navLinks[i].style.display !== "flex") {
+            if (window.getComputedStyle(navLinks[i]).getPropertyValue("display") === "none") {
+              navLinks[i].style.display = "flex";
+            }
+          } else if (navLinks[i].style.display === "none") {
+            navLinks[i].style.display = "flex";
+          } else {
+            navLinks[i].style.display = "none";
+          }
+        }
+      }
+      function addResources() {
+        for (i = 0; i < resourceNames.length; i++) {
+          document.getElementById(resourceDivs[i]).innerHTML += '<div class="resource"><div class="resource-title"><p>' + resourceNames[i] + '</p><p>Last Updated: ' + resourceDates[i] + '</p></div><p>' + resourceInfos[i] + '</div>';
+        }
+      }
+    </script>
+  </body>
+</html>

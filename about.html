@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="shortcut icon" href="./assets/images/logo.png">
+    <meta name="description" content="General information about Veggies of Virginia. Meeting times and locations. Informaction about executive board."> 
+    <meta name="keywords" content="CIO,UVA,club,vegan,veggies,plant-based,health,environment,veggies of virginia">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128636921-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-128636921-1');
+    </script>
+    <title>About - Veggies of Virginia at UVA</title>
+  </head>
+  <body onresize="updateElements()">
+    <nav>
+      <ul id="nav-links">
+        <li id="home"> <div id="mobile-spacer"></div> <a href="./index.html">Home</a> <button id="mobile-toggle" onclick="toggleNav()">&#9776</button> </li>
+        <li class="nav-link"> <a href="./about.html">About</a> </li>
+        <li class="nav-link"> <a href="./events.html">Events</a> </li>
+        <li class="nav-link"> <a href="./resources.html">Resources</a> </li>
+        <li class="nav-link"> <a href="./contact.html">Contact</a> </li>
+      </ul>
+    </nav>
+    <div id="content">
+      <h1 class="title">About</h1>
+      <div id="info">
+        <p>We meet every Monday night at 7:30pm in Nau 211.</p>
+        <p>Our major events include potlucks, guest speakers, philanthropy events, volunteer days, cook-offs, and attending Charlottesville events such as Vegan Roots Fest.</p>
+      </div>
+      <h2 class="subtitle">Exec. Board</h2>
+      <div id="exec"></div>
+    </div>
+    <footer class="footer">
+      <div id="footer-text">
+        <p id="contact">
+          Contact Veggies of Virginia: <a href="mailto:rac4ak@virginia.edu">rac4ak@virginia.edu</a>
+        </p>
+        <p id="copyright">
+          &copy 2018<script>new Date().getFullYear() > 2018 && document.write("-" + new Date().getFullYear());</script> - Samuel McBroom
+        </p>
+      </div>
+      <ul id="footer-links">
+        <li> <a class="icon" href="https://www.facebook.com/veggiesofvirginia/" target="_blank"> <img src="./assets/images/facebook.png" /> </a> </li>
+        <li> <a class="icon" href="https://www.instagram.com/veggiesofvirginia/" target="_blank"> <img src="./assets/images/instagram.png" /> </a> </li>
+      </ul>
+    </footer>
+    <script>
+      var prevWidth = window.innerWidth;
+      var execNames = ["Riley Chitwood", "Camille Rovani", "Courtney Jacobs", "Hannah Young", "Claire Long", "Alicia Zheng", "Eva Blau", "Josh Crane"];
+      var execPositions = ["President", "Vice President", "Outreach Chair", "Social Chair", "Social Chair", "Advocacy Chair", "Advisor", "Secretary"];
+      var execYears = ["Fourth Year", "Third Year", "Second Year", "Second Year", "Second Year", "Second Year", "Grad. UVA '2016", "Third Year"];
+      var execMajors = ["Majors: Global Environments, Sustainability", "Majors: Art History, French", "Major: Computer Science", "Major: Biology (neuroscience concetration), Minor: Anthropology", "Majors: Biology, East Asian Studies", "Majors: Global Sustainability, Spanish", "Major: Sociology", "Major: Interdisciplinary Studies"];
+      var execPhotos = ["riley_chitwood.png", "camille_rovani.png", "courtney_jacobs.png", "hannah_young.png", "claire_long.png", "alicia_zheng.png", "eva_blau.png", "josh_crane.png"];
+      addExec();
+      function updateElements() {
+        var navLinks = document.getElementsByClassName("nav-link");
+        for (i = 0; i < navLinks.length; i++) {
+          if (window.innerWidth < 767 && prevWidth >= 767) {
+            navLinks[i].style.display = "none";
+          } else if (window.innerWidth >= 767 && prevWidth < 767 && navLinks[i].style.display === "none") {
+            navLinks[i].style.display = "flex";
+          }
+        }
+        prevWidth = window.innerWidth;
+      }
+      function toggleNav() {
+        var navLinks = document.getElementsByClassName("nav-link");
+        for (i = 0; i < navLinks.length; i++) {
+          if (navLinks[i].style.display !== "none" && navLinks[i].style.display !== "flex") {
+            if (window.getComputedStyle(navLinks[i]).getPropertyValue("display") === "none") {
+              navLinks[i].style.display = "flex";
+            }
+          } else if (navLinks[i].style.display === "none") {
+            navLinks[i].style.display = "flex";
+          } else {
+            navLinks[i].style.display = "none";
+          }
+        }
+      }
+      function addExec() {
+        var photoFits = {};
+        [].forEach.call(execPhotos, function(name) {
+          var photo = new Image();
+          photo.addEventListener("load", function() {
+            if (photo.width > photo.height) {
+              photoFits[name] = "wide";
+            } else {
+              photoFits[name] = "tall";
+            }
+            if (Object.keys(photoFits).length === execNames.length) {
+              for (i = 0; i < execNames.length; i++) {
+                document.getElementById("exec").innerHTML += '<div class="exec-member"><div class="exec-photo"><div class="exec-photo-container"><img class=' + photoFits[execPhotos[i]] + ' src="./assets/images/exec/' + execPhotos[i] + '"/></div></div><div class="exec-info"><p>' + execNames[i] + '</p><p>' + execPositions[i] + '</p><p>' + execYears[i] + '</p><p>' + execMajors[i] + '</p></div></div>';
+              }
+            }
+          });
+          photo.src = "./assets/images/exec/" + name;
+        });
+      }
+    </script>
+  </body>
+</html>

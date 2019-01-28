@@ -1,0 +1,252 @@
+nav {
+  grid-area: nav;
+  background: #3d8341;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  overflow: hidden;
+}
+
+#nav-links {
+  padding: 0px 0px 0px 50px;
+  margin: 0;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: left;
+}
+
+#nav-links li {
+  display: flex;
+  padding: 0px;
+}
+
+#nav-links li a {
+  padding: 15px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+#mobile-toggle {
+  cursor: pointer;
+  display: none;
+  color: #90310f;
+  float: right;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  font-size: 30px;
+  border: none;
+  background: #3d8341;
+}
+
+#mobile-spacer {
+  width: 27px;
+  height: 40px;
+  display: none;
+}
+
+#content {
+  grid-area: content;
+  display: grid;
+  grid-template-areas: '. logo .' '. line .' '. summary .' '. slideshow .' '. . .';
+  grid-template-rows: auto auto auto auto 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
+  margin: 15px 0px;
+}
+
+#slideshow {
+  grid-area: slideshow;
+  display: inline-block;
+  height: 430px;
+  width: 100%;
+  position: relative;
+  background: #90310f;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.footer {
+  grid-area: footer;
+  margin: 0;
+  padding: 20px 20px;
+  border-top: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#footer-text {
+  text-align: left;
+  margin: 0px;
+  font-size: 12px;
+}
+
+@media (min-width: 767px) {
+  #nav-links li a:hover {
+    background-color: #58ad4d;
+  }
+
+  #cycleImagesLeft:hover {
+    background: #58ad4d;
+    opacity: 1.0;
+  }
+
+  #cycleImagesRight:hover {
+    background: #58ad4d;
+    opacity: 1.0;
+  }
+}
+
+@media (max-width: 766px) {
+  #nav-links {
+    padding: 0px;
+    flex-direction: column;
+  }
+
+  #nav-links li {
+    padding: 15px 0px 15px 0px;
+    background-color: #90310f;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #nav-links li a {
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #nav-links #home {
+    padding: 6px 15px 6px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #3d8341;
+  }
+
+  #mobile-toggle {
+    display: inline;
+  }
+
+  #mobile-spacer {
+    display: inline;
+  }
+
+  #content {
+    grid-template-areas: '. logo .' '. line .' '. summary .' 'slideshow slideshow slideshow';
+  }
+  
+  #slideshow {
+    height: 215px;
+  }
+
+  .footer {
+    flex-direction: column-reverse;
+  }
+
+  #footer-text {
+    text-align: center;
+  }
+}
+
+#cycleImagesLeft {
+  grid-area: cycleImagesLeft;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  position: absolute;
+  background: #3d8341;
+  color: white;
+  cursor: pointer;
+  padding: 15px 15px 15px 5px;
+  margin: 0px;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+#cycleImagesRight {
+  grid-area: cycleImagesRight;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  position: absolute;
+  background: #3d8341;
+  color: white;
+  cursor: pointer;
+  padding: 15px 5px 15px 15px;
+  margin: 0px;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+#logo {
+  display: block;
+  grid-area: logo;
+  width: 258px;
+  justify-content: center;
+  margin: 20px auto
+}
+
+#summary {
+  grid-area: summary;
+  border-top: 1px solid black;
+  padding: 15px 0px 0px 0px;
+}
+
+.summarySlides {
+  display: block;
+  width: auto;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 1s linear;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Avenir;
+}
+
+body {
+  height: 100%;
+  display: grid;
+  grid-template-areas: 'nav' 'content' 'footer';
+  grid-template-rows: auto 1fr auto;
+}
+
+#footer-links {
+  justify-content: center;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#footer-links li {
+  height: 48px;
+  padding: 0px 10px;
+}
+
+#footer-links li img {
+  height: 48px;
+}
