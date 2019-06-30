@@ -86,6 +86,10 @@
         for (i = 0; i < resourceNames.length; i++) {
           document.getElementById(resourceDivs[i]).innerHTML += '<div class="resource"><div class="resource-title"><p>' + resourceNames[i] + '</p><p>Last Updated: ' + resourceDates[i] + '</p></div><p>' + resourceInfos[i] + '</div>';
         }
+        var body = document.body;
+        var html = document.documentElement;
+        var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+        document.body.style.minHeight = height + "px";
       }
     </script>
   </body>

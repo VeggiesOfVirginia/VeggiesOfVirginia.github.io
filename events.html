@@ -114,6 +114,10 @@
         for (i = 0; i < eventNames.length; i++) {
           document.getElementById(eventSemesters[i]).innerHTML += '<div class="event"><div class="event-title"><p>' + eventNames[i] + '</p><p>' + eventDates[i] + '</p></div><p>' + eventInfos[i] + '</p></div>';
         }
+        var body = document.body;
+        var html = document.documentElement;
+        var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+        document.body.style.minHeight = height + "px";
       }
     </script>
   </body>

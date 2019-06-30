@@ -161,6 +161,10 @@
               for (i = 0; i < execNames.length; i++) {
                 document.getElementById("exec").innerHTML += '<div class="exec-member"><div class="exec-photo"><div class="exec-photo-container"><img class=' + photoFits[execPhotos[i]] + ' src="./assets/images/exec/' + execPhotos[i] + '"/></div></div><div class="exec-info"><h4>' + execNames[i] + '</h4><p>' + execPositions[i] + '</p><p>' + execYears[i] + '</p><p>' + execMajors[i] + '</p></div></div>';
               }
+              var body = document.body;
+              var html = document.documentElement;
+              var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+              document.body.style.minHeight = height + "px";
             }
           });
           photo.src = "./assets/images/exec/" + name;
