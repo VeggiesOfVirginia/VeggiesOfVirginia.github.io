@@ -1,3 +1,14 @@
+:root {
+  color-scheme: light dark;
+  --separator: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --separator: white;
+  }
+}
+
 nav {
   grid-area: nav;
   background: #3d8341;
@@ -68,7 +79,7 @@ nav {
   grid-area: footer;
   margin: 0;
   padding: 20px 20px;
-  border-top: 1px solid black;
+  border-top: 1px solid var(--separator);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -140,7 +151,7 @@ nav {
 
 .title {
   grid-area: title;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--separator);
 }
 
 #info {
