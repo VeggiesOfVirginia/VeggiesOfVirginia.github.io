@@ -1,0 +1,17 @@
+#content {
+  grid-area: content;
+  display: grid;
+  grid-template-areas: '. title .' '. info .' '. . .';
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr 15fr 1fr;
+  margin: 15px 0px;
+}
+
+.title {
+  grid-area: title;
+  border-bottom: 1px solid var(--separator);
+}
+
+#info {
+  grid-area: info;
+}

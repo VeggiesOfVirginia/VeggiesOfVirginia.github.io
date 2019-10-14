@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="css/resources.css">
-    <link rel="shortcut icon" href="./assets/images/logo.png">
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="resources.css">
+    <link rel="shortcut icon" href="../assets/images/logo_light.png">
     <meta name="description" content="Resources created or shared by members of Veggies of Virginia, such as guides and menus."> 
     <meta name="keywords" content="CIO,UVA,club,vegan,veggies,plant-based,health,environment,veggies of virginia">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,21 +20,25 @@
   <body onresize="updateElements()">
     <nav>
       <ul id="nav-links">
-        <li id="home"> <div id="mobile-spacer"></div> <a href="./index.html">Home</a> <button id="mobile-toggle" onclick="toggleNav()">&#9776</button> </li>
-        <li class="nav-link">
-          <a href="../about.html">About</a>
+        <li id="home">
+          <div id="mobile-spacer"></div>
+          <a href="..">Home</a>
+          <button id="mobile-toggle" onclick="toggleNav()">&#9776</button>
         </li>
         <li class="nav-link">
-          <a href="../events.html">Events</a>
+          <a href="../about">About</a>
         </li>
         <li class="nav-link">
-          <a href="../resources.html">Resources</a>
+          <a href="../events">Events</a>
         </li>
         <li class="nav-link">
-          <a href="../contact.html">Contact</a>
+          <a href=".">Resources</a>
         </li>
         <li class="nav-link">
-          <a href="../mac/index.html"><b>Mac n' Cheese Cook-off!</b></a>
+          <a href="../contact">Contact</a>
+        </li>
+        <li class="nav-link">
+          <a href="../mac"><b>Mac n' Cheese Cook-off!</b></a>
         </li>
       </ul>
     </nav>
@@ -57,14 +62,22 @@
         </p>
       </div>
       <ul id="footer-links">
-        <li> <a class="icon" href="https://www.facebook.com/veggiesofvirginia/" target="_blank"> <img src="./assets/images/facebook.png" /> </a> </li>
-        <li> <a class="icon" href="https://www.instagram.com/veggiesofvirginia/" target="_blank"> <img src="./assets/images/instagram.png" /> </a> </li>
+        <li>
+          <a class="icon" href="https://www.facebook.com/veggiesofvirginia/" target="_blank">
+            <img src="../assets/images/facebook.png" />
+          </a>
+        </li>
+        <li> 
+          <a class="icon" href="https://www.instagram.com/veggiesofvirginia/" target="_blank">
+            <img src="../assets/images/instagram.png" />
+          </a>
+        </li>
       </ul>
     </footer>
     <script>
       var prevWidth = window.innerWidth;
       var resourceNames = ["Veggies of Virginia FAQ", "Eating in Charlottesville", "Vegan Job Guide", "A Week of Meals"];
-      var resourceInfos = ["Check out the guide <a href=\"./assets/guides/vov_faq.pdf\">here</a>!", "Check out the guide <a href=\"https://docs.google.com/document/d/1xlkeFdMjyR1tgeJz35Owo3LdTzYtgEww5gu8uPVN16g/edit?usp=sharing\">here</a>!", "Check out the guide <a href=\"./assets/guides/vegan_jobs.pdf\">here</a>!", "Check out the menu <a href=\"./assets/menus/menu_0.pdf\">here</a>!"];
+      var resourceInfos = ["Check out the guide <a href=\"assets/files/vov_faq.pdf\">here</a>!", "Check out the guide <a href=\"https://docs.google.com/document/d/1xlkeFdMjyR1tgeJz35Owo3LdTzYtgEww5gu8uPVN16g/edit?usp=sharing\">here</a>!", "Check out the guide <a href=\"assets/files/vegan_jobs.pdf\">here</a>!", "Check out the menu <a href=\"assets/files/menu_0.pdf\">here</a>!"];
       var resourceDates = ["Monday, Nov. 12, 2018", "Monday, Nov. 12, 2018", "Monday, Nov. 12, 2018", "Monday, Nov. 12, 2018"];
       var resourceDivs = ["guides", "guides", "guides", "menus"];
       addResources();

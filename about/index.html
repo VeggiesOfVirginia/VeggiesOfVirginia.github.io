@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="shortcut icon" href="./assets/images/logo.png">
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="shortcut icon" href="../assets/images/logo_light.png">
     <meta name="description" content="General information about Veggies of Virginia. Meeting times and locations. Informaction about executive board."> 
     <meta name="keywords" content="CIO,UVA,club,vegan,veggies,plant-based,health,environment,veggies of virginia">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,21 +20,25 @@
   <body onresize="updateElements()">
     <nav>
       <ul id="nav-links">
-        <li id="home"> <div id="mobile-spacer"></div> <a href="./index.html">Home</a> <button id="mobile-toggle" onclick="toggleNav()">&#9776</button> </li>
-        <li class="nav-link">
-          <a href="../about.html">About</a>
+        <li id="home">
+          <div id="mobile-spacer"></div>
+          <a href="..">Home</a>
+          <button id="mobile-toggle" onclick="toggleNav()">&#9776</button>
         </li>
         <li class="nav-link">
-          <a href="../events.html">Events</a>
+          <a href=".">About</a>
         </li>
         <li class="nav-link">
-          <a href="../resources.html">Resources</a>
+          <a href="../events">Events</a>
         </li>
         <li class="nav-link">
-          <a href="../contact.html">Contact</a>
+          <a href="../resources">Resources</a>
         </li>
         <li class="nav-link">
-          <a href="../mac/index.html"><b>Mac n' Cheese Cook-off!</b></a>
+          <a href="../contact">Contact</a>
+        </li>
+        <li class="nav-link">
+          <a href="../mac"><b>Mac n' Cheese Cook-off!</b></a>
         </li>
       </ul>
     </nav>
@@ -56,8 +61,16 @@
         </p>
       </div>
       <ul id="footer-links">
-        <li> <a class="icon" href="https://www.facebook.com/veggiesofvirginia/" target="_blank"> <img src="./assets/images/facebook.png" /> </a> </li>
-        <li> <a class="icon" href="https://www.instagram.com/veggiesofvirginia/" target="_blank"> <img src="./assets/images/instagram.png" /> </a> </li>
+        <li>
+          <a class="icon" href="https://www.facebook.com/veggiesofvirginia/" target="_blank">
+            <img src="../assets/images/facebook.png" />
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="https://www.instagram.com/veggiesofvirginia/" target="_blank">
+            <img src="../assets/images/instagram.png" />
+          </a>
+        </li>
       </ul>
     </footer>
     <script>
@@ -105,11 +118,11 @@
             }
             if (Object.keys(photoFits).length === execNames.length) {
               for (i = 0; i < execNames.length; i++) {
-                document.getElementById("exec").innerHTML += '<div class="exec-member"><div class="exec-photo"><div class="exec-photo-container"><img class=' + photoFits[execPhotos[i]] + ' src="./assets/images/exec/' + execPhotos[i] + '"/></div></div><div class="exec-info"><h4>' + execNames[i] + '</h4><p>' + execPositions[i] + '</p><p>' + execYears[i] + '</p><p>' + execMajors[i] + '</p></div></div>';
+                document.getElementById("exec").innerHTML += '<div class="exec-member"><div class="exec-photo"><div class="exec-photo-container"><img class=' + photoFits[execPhotos[i]] + ' src="assets/images/' + execPhotos[i] + '"/></div></div><div class="exec-info"><h4>' + execNames[i] + '</h4><p>' + execPositions[i] + '</p><p>' + execYears[i] + '</p><p>' + execMajors[i] + '</p></div></div>';
               }
             }
           });
-          photo.src = "./assets/images/exec/" + name;
+          photo.src = "assets/images/" + name;
         });
       }
     </script>

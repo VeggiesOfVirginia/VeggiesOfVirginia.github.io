@@ -1,0 +1,57 @@
+#content {
+  grid-area: content;
+  display: grid;
+  grid-template-areas: '. title .' '. info .' '. subtitle .' '. exec .' '. . .';
+  grid-template-rows: auto auto auto auto 1fr;
+  grid-template-columns: 1fr 15fr 1fr;
+  margin: 15px 0px;
+}
+
+.title {
+  grid-area: title;
+  border-bottom: 1px solid var(--separator);
+}
+
+#info {
+  grid-area: info;
+}
+
+.subtitle {
+  grid-area: subtitle;
+  text-align: center;
+}
+
+#exec {
+  grid-area: exec;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#exec .exec-member {
+  border-radius: 10px;
+  border: 1px solid #3d8341;
+  margin: 10px 20px;
+  padding: 15px;
+  width: 200px;
+}
+
+#exec .exec-photo {
+  border-bottom: 1px solid var(--separator);
+  padding: 15px;
+}
+
+#exec .exec-photo-container {
+  width: 100%;
+  height: 170px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#exec .exec-photo .tall {
+  width: 100%;
+}
+
+#exec .exec-photo .wide {
+  height: 100%;
+}

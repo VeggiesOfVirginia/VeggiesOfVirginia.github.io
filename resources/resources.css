@@ -1,0 +1,59 @@
+#content {
+  grid-area: content;
+  display: grid;
+  grid-template-areas: '. title .' '. info .' '. guides-list .' '. guides .' '. menus-list .' '. menus .' '. . .';
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr 15fr 1fr;
+  margin: 15px 0px;
+}
+
+.resource .resource-title {
+  display: flex;
+  font-weight: bold;
+  justify-content: space-between
+}
+
+@media (max-width: 766px) {
+  .resource .resource-title {
+    display: block;
+  }
+}
+
+.title {
+  grid-area: title;
+  border-bottom: 1px solid var(--separator);
+}
+
+#info {
+  grid-area: info;
+}
+
+.subtitle {
+  text-align: center;
+}
+
+#guides-list {
+  grid-area: guides-list;
+}
+
+#menus-list {
+  grid-area: menus-list;
+}
+
+#guides {
+  grid-area: guides;
+  display: block;
+  justify-content: center;
+}
+
+.resource {
+  border-top: 1px solid #3d8341;
+  margin: 10px 20px;
+  padding: 15px 15px 50px 15px;
+}
+
+#menus {
+  grid-area: menus;
+  display: block;
+  justify-content: center;
+}
