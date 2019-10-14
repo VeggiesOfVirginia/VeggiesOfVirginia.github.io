@@ -9,33 +9,63 @@
 
 <url>
   <loc>https://www.veggiesofvirginia.com/</loc>
-  <lastmod>2018-11-12T14:30:58+00:00</lastmod>
+  <lastmod>2019-10-14T18:43:15+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.veggiesofvirginia.com/index.html</loc>
-  <lastmod>2018-11-12T14:30:58+00:00</lastmod>
+  <loc>https://www.veggiesofvirginia.com/.</loc>
+  <lastmod>2019-10-14T18:43:15+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.veggiesofvirginia.com/about.html</loc>
-  <lastmod>2018-11-12T14:31:07+00:00</lastmod>
+  <loc>https://www.veggiesofvirginia.com/about/</loc>
+  <lastmod>2019-10-14T18:43:15+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.veggiesofvirginia.com/events.html</loc>
-  <lastmod>2018-11-12T14:31:17+00:00</lastmod>
+  <loc>https://www.veggiesofvirginia.com/events/</loc>
+  <lastmod>2019-10-14T18:43:15+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.veggiesofvirginia.com/resources.html</loc>
-  <lastmod>2018-11-12T14:31:25+00:00</lastmod>
+  <loc>https://www.veggiesofvirginia.com/resources/</loc>
+  <lastmod>2019-10-14T18:43:15+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.veggiesofvirginia.com/contact.html</loc>
-  <lastmod>2018-11-12T14:31:34+00:00</lastmod>
+  <loc>https://www.veggiesofvirginia.com/contact/</loc>
+  <lastmod>2019-10-14T18:43:15+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.veggiesofvirginia.com/mac/</loc>
+  <lastmod>2019-10-14T18:43:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.veggiesofvirginia.com/about/.</loc>
+  <lastmod>2019-10-14T18:43:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.veggiesofvirginia.com/events/.</loc>
+  <lastmod>2019-10-14T18:43:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.veggiesofvirginia.com/resources/.</loc>
+  <lastmod>2019-10-14T18:43:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.veggiesofvirginia.com/contact/.</loc>
+  <lastmod>2019-10-14T18:43:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.veggiesofvirginia.com/mac/.</loc>
+  <lastmod>2019-10-14T18:43:15+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
