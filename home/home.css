@@ -31,12 +31,11 @@
 
 @media (max-width: 766px) {
   #content {
-    grid-template-areas: '. logo .' '. line .' '. summary .' 'slideshow slideshow slideshow' '. legal .';
+    grid-template-columns: 1fr 15fr 1fr;
   }
   
   #slideshow {
     height: 215px;
-    margin: 10px;
   }
 }
 
