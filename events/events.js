@@ -23,7 +23,7 @@ var eventSemesters = [
   "spring2019-events",
   "fall2018-events",
   "fall2018-events",
-  "spring2018-events",
+  "spring2018-events"
 ];
 
 function addEvents() {

@@ -17,28 +17,6 @@
   border: 1px solid #58ad4d;
 }
 
-@media (min-width: 767px) {
-  #cycleImagesLeft:hover {
-    background: #58ad4d;
-    opacity: 1.0;
-  }
-
-  #cycleImagesRight:hover {
-    background: #58ad4d;
-    opacity: 1.0;
-  }
-}
-
-@media (max-width: 766px) {
-  #content {
-    grid-template-columns: 1fr 15fr 1fr;
-  }
-  
-  #slideshow {
-    height: 215px;
-  }
-}
-
 #cycleImagesLeft {
   grid-area: cycleImagesLeft;
   left: 0;
@@ -106,4 +84,26 @@
   grid-area: legal;
   border-top: 1px solid var(--separator);
   padding: 15px 0px 0px 0px;
+}
+
+@media (min-width: 767px) {
+  #cycleImagesLeft:hover {
+    background: #58ad4d;
+    opacity: 1.0;
+  }
+
+  #cycleImagesRight:hover {
+    background: #58ad4d;
+    opacity: 1.0;
+  }
+}
+
+@media (max-width: 766px) {
+  #content {
+    grid-template-columns: 1fr 15fr 1fr;
+  }
+  
+  #slideshow {
+    height: 215px;
+  }
 }
