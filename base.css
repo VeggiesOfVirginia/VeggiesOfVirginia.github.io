@@ -9,6 +9,10 @@
   }
 }
 
+a {
+  color: #4193c6;
+}
+
 nav {
   grid-area: nav;
   background: #3d8341;
