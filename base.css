@@ -1,16 +1,18 @@
 :root {
   color-scheme: light dark;
   --separator: black;
+  --link: #416ed2;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --separator: white;
+    --link: #5ac8fa;
   }
 }
 
 a {
-  color: #5ac8fa;
+  color: var(--link);
 }
 
 nav {
