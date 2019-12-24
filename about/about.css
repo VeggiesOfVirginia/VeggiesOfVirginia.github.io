@@ -46,6 +46,9 @@
   height: 170px;
   border-radius: 10px;
   overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 #exec .exec-photo .tall {
