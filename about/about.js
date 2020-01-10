@@ -40,7 +40,7 @@ var execYears = [
 var execMajors = [
   "Majors: Computer Science, Physics",
   "Majors: Global Sustainability, Environmental Science",
-  "Major: Unknown",
+  "Majors: Global Sustainability, Environmental Science",
   "Major: Unknown",
   "Major: Computer Science",
   "Majors: Civil Engineering, Global Sustainability",
