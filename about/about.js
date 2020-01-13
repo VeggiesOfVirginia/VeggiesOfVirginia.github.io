@@ -47,7 +47,7 @@ var execMajors = [
   "Major: Unknown",
   "Major: Civil Engineering",
   "Majors: Global Sustainability, Spanish",
-  "Major: Unknown"
+  "Major: Psychology"
 ];
 
 var execPhotos = [
