@@ -25,16 +25,16 @@ var execPositions = [
 ];
 
 var execYears = [
+  "Fourth Year",
   "Third Year",
+  "Fourth Year",
   "Second Year",
+  "Fourth Year",
   "Third Year",
-  "First Year",
+  "Fourth Year",
   "Third Year",
-  "Second Year",
-  "Third Year",
-  "Second Year",
-  "Third Year",
-  "Second Year"
+  "Fourth Year",
+  "Third Year"
 ];
 
 var execMajors = [
