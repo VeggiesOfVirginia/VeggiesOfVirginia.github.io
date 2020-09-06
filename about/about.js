@@ -44,7 +44,7 @@ var execMajors = [
   "Major: English",
   "Major: Computer Science",
   "Majors: Civil Engineering, Global Sustainability",
-  "Major: Unknown",
+  "Major: Commerce",
   "Major: Civil Engineering",
   "Majors: Global Sustainability, Spanish",
   "Major: Psychology"
