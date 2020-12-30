@@ -1,84 +1,19 @@
-var execNames = [
-  "Sam McBroom",
-  "Brooke Crouch",
-  "Michael Nicklas",
-  "Riley Phillips",
-  "Courtney Jacobs",
-  "Madison Crouch",
-  "Natalie Finman",
-  "Haley Dues",
-  "Alicia Zheng",
-  "Chelsea Ulrich"
-];
-
-var execPositions = [
-  "President, Webmaster",
-  "Vice President",
-  "Vice President",
-  "Secretary",
-  "Treasurer",
-  "Social Chair",
-  "Social Chair",
-  "Outreach Chair",
-  "Advocacy Chair",
-  "Advocacy Chair"
-];
-
-var execYears = [
-  "Fourth Year",
-  "Third Year",
-  "Fourth Year",
-  "Second Year",
-  "Fourth Year",
-  "Third Year",
-  "Fourth Year",
-  "Third Year",
-  "Fourth Year",
-  "Third Year"
-];
-
-var execMajors = [
-  "Majors: Computer Science, Physics",
-  "Majors: Global Sustainability, Environmental Science",
-  "Majors: Global Sustainability, Environmental Science",
-  "Major: English",
-  "Major: Computer Science",
-  "Majors: Civil Engineering, Global Sustainability",
-  "Major: Commerce",
-  "Major: Civil Engineering",
-  "Majors: Global Sustainability, Spanish",
-  "Major: Psychology"
-];
-
-var execPhotos = [
-  "sam_mcbroom",
-  "brooke_crouch",
-  "michael_nicklas",
-  "riley_phillips",
-  "courtney_jacobs",
-  "madison_crouch",
-  "natalie_finman",
-  "haley_dues",
-  "alicia_zheng",
-  "chelsea_ulrich"
+let exec = [
+  {name: "Haley Dues", position: "President", year: "Third", majors: "Civil Engineering", photo: "haley_dues"},
+  {name: "Riley Phillips", position: "Vice President", year: "Second", majors: "English", photo: "riley_phillips"},
+  {name: "Chyna Brown", position: "Treasurer", year: "Third", majors: "English", photo: "chyna_brown"},
+  {name: "Brooke Crouch", position: "Social Chair", year: "Third", majors: "Global Sustainability, Environmental Science", photo: "brooke_crouch"},
+  {name: "Madison Crouch", position: "Advocacy Chair", year: "Third", majors: "Civil Engineering, Global Sustainability", photo: "madison_crouch"},
+  {name: "Jamie Staeben", position: "Webmaster", year: "Third", majors: "Astrophysics, Computer Science", photo: "jamie_staeben"}
 ];
 
 function addExec() {
-  var photoFits = {};
-  [].forEach.call(execPhotos, function(name) {
-    var photo = new Image();
-    photo.addEventListener("load", function() {
-      if (photo.width > photo.height) {
-        photoFits[name] = "wide";
-      } else {
-        photoFits[name] = "tall";
-      }
-      if (Object.keys(photoFits).length === execNames.length) {
-        for (i = 0; i < execNames.length; i++) {
-          document.getElementById("exec").innerHTML += '<div class="exec-member"><div class="exec-photo"><div class="exec-photo-container"><img class=' + photoFits[execPhotos[i]] + ' src="assets/images/' + execPhotos[i] + '.png"/></div></div><div class="exec-info"><h4>' + execNames[i] + '</h4><p>' + execPositions[i] + '</p><p>' + execYears[i] + '</p><p>' + execMajors[i] + '</p></div></div>';
-        }
-      }
+  exec.forEach(e => {
+    let photo = new Image();
+    photo.addEventListener("load", () => {
+      const fit = photo.width > photo.height ? "wide" : "tall";
+      document.getElementById("exec").innerHTML += `<div class="exec-member"><div class="exec-photo"><div class="exec-photo-container"><img class="${fit}" src="assets/images/${e.photo}.png"/></div></div><div class="exec-info"><h4>${e.name}</h4><p>${e.position}</p><p>${e.year} Year</p><p>${e.majors}</p></div></div>`;
     });
-    photo.src = "assets/images/" + name + ".png";
+    photo.src = `assets/images/${e.photo}.png`;
   });
 }
