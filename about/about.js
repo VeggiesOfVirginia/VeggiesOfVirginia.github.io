@@ -1,10 +1,10 @@
 let exec = [
-  {name: "Haley Dues", position: "President", year: "Third", majors: "Civil Engineering", photo: "haley_dues"},
-  {name: "Riley Phillips", position: "Vice President", year: "Second", majors: "English", photo: "riley_phillips"},
-  {name: "Chyna Brown", position: "Treasurer", year: "Third", majors: "English", photo: "chyna_brown"},
-  {name: "Brooke Crouch", position: "Social Chair", year: "Third", majors: "Global Sustainability, Environmental Science", photo: "brooke_crouch"},
-  {name: "Madison Crouch", position: "Advocacy Chair", year: "Third", majors: "Civil Engineering, Global Sustainability", photo: "madison_crouch"},
-  {name: "Jamie Staeben", position: "Webmaster", year: "Third", majors: "Astrophysics, Computer Science", photo: "jamie_staeben"}
+  {name: "Haley Dues", position: "President", year: "Fourth", majors: "Civil Engineering", photo: "haley_dues"},
+  {name: "Riley Phillips", position: "Vice President", year: "Third", majors: "English", photo: "riley_phillips"},
+  {name: "Chyna Brown", position: "Treasurer", year: "Fourth", majors: "English", photo: "chyna_brown"},
+  {name: "Brooke Crouch", position: "Social Chair", year: "Fourth", majors: "Global Sustainability, Environmental Science", photo: "brooke_crouch"},
+  {name: "Madison Crouch", position: "Advocacy Chair", year: "Fourth", majors: "Civil Engineering, Global Sustainability", photo: "madison_crouch"},
+  {name: "Jamie Staeben", position: "Webmaster", year: "Fourth", majors: "Astrophysics, Computer Science", photo: "jamie_staeben"}
 ];
 
 function addExec() {
